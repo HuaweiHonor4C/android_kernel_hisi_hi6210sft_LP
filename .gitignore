@@ -1,0 +1,119 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules
+#
+.*
+*.o
+*.o.*
+*.a
+*.s
+*.ko
+*.so
+*.so.dbg
+*.mod.c
+*.i
+*.lst
+*.symtypes
+*.order
+modules.builtin
+*.elf
+*.bin
+*.gz
+*.bz2
+*.lzma
+*.xz
+*.lzo
+*.patch
+*.gcno
+
+#
+# Top-level generic files
+#
+/tags
+/TAGS
+/linux
+/vmlinux
+/vmlinuz
+/System.map
+/Module.markers
+/Module.symvers
+
+#
+# Debian directory (make deb-pkg)
+#
+/debian/
+
+#
+# git files that we don't want to ignore even it they are dot-files
+#
+!.gitignore
+!.mailmap
+
+#
+# Generated include files
+#
+include/config
+include/generated
+arch/*/include/generated
+arch/arm/mach-hi6620/
+#regulator auto-generate file
+include/hisi/regulator_desc.h
+include/hisi/regulator_info.h
+include/hisi/regulator_map.h
+include/hisi/*_regulator_desc.h
+include/hisi/*_regulator_map.h
+include/hisi/drv_regulator_user.h
+
+#iomux auto-generate file
+arch/arm/mach-hi6620/iomux/hi6620_*_iomux_blocks.h
+arch/arm/mach-hi6620/iomux/hi6620_iomux.h
+arch/arm/mach-hi6620/iomux/hi6620_*_iomux_pins.h
+
+# stgit generated dirs
+patches-*
+
+# quilt's files
+patches
+series
+
+# cscope files
+cscope.*
+ncscope.*
+
+# gnu global files
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
+*.orig
+*~
+\#*#
+
+#boardid config files converted from xml
+arch/arm/boot/dts/auto-generate/
+drivers/huawei/hsad/auto-generate/
+drivers/huawei/hsad/config_total_product.c
+include/hsad/config_boardids.h
+
+include/hisi/*ipps_para.h
+
+#
+# Leavings from module signing
+#
+extra_certificates
+signing_key.priv
+signing_key.x509
+x509.genkey
+#
+# Auto generated dts files
+#
+arch/arm/boot/dts/auto-generate/
+arch/arm64/boot/dts/auto-generate/
